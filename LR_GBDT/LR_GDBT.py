@@ -8,7 +8,7 @@ import pandas as pd
 from sklearn.linear_model import SGDClassifier
 
 # 加载数据
-DATA_DIR = 'data' + os.sep
+DATA_DIR = 'dataset' + os.sep
 TRAIN_FILE_PATH = DATA_DIR + 'train.txt'
 TEST_FILE_PATH = DATA_DIR + 'test.txt'
 RESULT_DIR = 'result' + os.sep
@@ -162,7 +162,7 @@ columns = ['instance_id', 'time', 'city', 'province', 'carrier', 'devtype', 'mak
            'advert_name', 'first_advert_industry',
            'second_advert_industry', 'click']
 whole_data_df = whole_data_df.reindex(columns=columns)
-print('data pre-processing done!')
+print('dataset pre-processing done!')
 
 # 一共29个特征，包括instance_id, click; 均为cat特征共27个;
 cat_feats = [_ for _ in columns if _ not in ['instance_id', 'click']]
